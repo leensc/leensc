@@ -1,0 +1,256 @@
+@font-face {
+    font-family: PlayfairDisplay-Regular;
+    src: url(../font/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Saira-Regular;
+    src: url(../font/static/Saira-Regular.ttf);
+}
+
+@font-face {
+    font-family: NotoSerifJP-Regular;
+    src: url(../font/Noto_Serif_JP/static/NotoSerifJP-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../font/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.uk-heading-medium,
+.uk-heading-small,
+p,
+.uk-navbar-nav>li>a,
+.uk-button,
+.uk-navbar-dropdown {
+    font-family: NotoSerifJP-Regular;
+}
+
+.uk-h2 {
+    font-family: NotoSerifJP-Regular;
+}
+
+.uk-heading-large {
+    font-family: Montserrat-Bold;
+    letter-spacing: -3px;
+}
+
+p {
+    font-family: Montserrat-Regular;
+}
+
+.uk-text-lead {
+    font-size: 20px;
+}
+
+.uk-text-small {
+    font-size: 10px;
+}
+
+.button-circle-animation-primary {
+    background-color: #9891e1;
+}
+
+.button-circle-animation-secondary {
+    background-color: transparent;
+}
+
+.button-circle-animation {
+    color: #000;
+    border: 1px solid #252525;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #252525;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out, outline-offset 0.1s linear;
+    z-index: 1;
+    outline: 1px solid #252525;
+    outline-offset: 4px;
+}
+
+.button-circle-animation:hover {
+    color: #fff;
+    background-color: transparent;
+    outline-offset: 3px;
+}
+
+.button-circle-animation:active {
+    outline-offset: 0px;
+}
+
+.button-circle-animation::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s linear;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.button-circle-animation:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}
+
+.box-border-3d {
+    position: relative;
+}
+
+.box-border-3d::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #252525;
+    border-right: 1px solid #252525;
+    position: absolute;
+    left: 30px;
+    top: -30px;
+    z-index: 1;
+}
+
+.box-border-3d::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #252525;
+    border-bottom: 1px solid #252525;
+    position: absolute;
+    left: -30px;
+    top: 30px;
+    z-index: 1;
+}
+
+.uk-navbar-nav>li>a {
+    text-transform: capitalize;
+    color: #000;
+    font-size: 16px;
+    padding: 0;
+    min-height: 0;
+}
+
+.uk-navbar-nav>li.uk-active>a {}
+
+.uk-navbar-container {
+    /* position: fixed;
+    top: 20px; */
+
+    /* z-index: 2; */
+}
+
+.uk-sticky {
+    top: 40px;
+}
+
+html,
+body {
+    height: 3000px;
+}
+
+header {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+#about {
+
+}
+
+#about .about-img {
+    padding: 50px;
+}
+
+#about .about-desc {
+    padding: 50px;
+}
+
+.uk-heading-large {
+    font-family: NotoSerifJP-Regular;
+}
+
+.clsd {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    font-family: NotoSerifJP-Regular;
+    font-weight: bold;
+}
+
+.box-item-tutorial {
+    border: 1px solid black;
+    color: black;
+}
+
+.uk-slider-items {
+    user-select: none;
+}
+
+.uk-dotnav>.uk-active>* {
+    background-color: black;
+    border-color: black;
+}
+
+.uk-dotnav>*>* {
+    border: 1px solid black;
+}
+
+.background-mask {
+    mask-image: linear-gradient(var(--mask-direction,to right),transparent,#000 20%,#000 80%,transparent);
+}
+
+@media screen and (max-width: 1200px) {
+    #about .about-img {
+        padding-right: 25px;
+    }
+
+    #about .about-desc {
+        padding-right: 25px;
+    }
+
+    .clsd {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #about .about-img {
+        padding: 15px;
+    }
+    
+    #about .about-desc {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .box-border-3d::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 1px solid #252525;
+        position: absolute;
+        left: -15px;
+        top: 15px;
+        z-index: -1;
+    }
+
+    .background-mask {
+        mask-image: none;
+    }
+}
