@@ -253,4 +253,8 @@ header {
     .background-mask {
         mask-image: none;
     }
+
+    .uk-heading-large {
+        font-size: 3.6rem;
+    }
 }
